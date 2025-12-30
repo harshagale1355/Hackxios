@@ -21,9 +21,13 @@ import re
 import base64
 import time
 from PIL import Image
+from dotenv import load_dotenv
+
 
 # OpenRouter API Key (Mistral 7B)
-OPENROUTER_API_KEY = "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"
+load_dotenv()
+OPENROUTER_API_KEY = os.getenv("My_api_key")
+
 
 # Initialize FastAPI app
 app = FastAPI(
